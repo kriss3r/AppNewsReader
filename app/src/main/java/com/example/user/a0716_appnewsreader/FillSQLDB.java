@@ -58,7 +58,7 @@ public class FillSQLDB extends AsyncTask<ArrayList<Long>,Void,Boolean> {
     protected void onPostExecute(Boolean aBoolean) {
         super.onPostExecute(aBoolean);
 
-        for(int i=0;i<array.size();i++){
+        for(int i=0;i<20;i++){
             try {
                 JSONObject a = array.get(i);
                 int id = a.getInt("id");

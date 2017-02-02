@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             int urlAddress = c.getColumnIndex("urlAddress");
             int title = c.getColumnIndex("title");
             c.moveToFirst();
-            while(c.isLast()!=true){
+            for(int i=0;i<20;i++){
                 listOfTittles.add(c.getString(title));
                 c.moveToNext();
             }
