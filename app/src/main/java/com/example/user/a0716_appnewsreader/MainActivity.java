@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         mainList = (ListView) findViewById(R.id.listView);
         listOfTittles = new ArrayList<>();
         //Background (Back-end) SQL DB.
+
         articlesDatabase= this.openOrCreateDatabase("articlesDatabase",MODE_PRIVATE,null);
         articlesDatabase.execSQL("CREATE TABLE IF NOT EXISTS articles (storyID int(10),urlAddress VARCHAR, title VARCHAR)");
         // fill with data from other class.
@@ -38,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
                 fillListWithData();
             }
         }else {
-           /* clearSQLDatabase(articlesDatabase);
+            clearSQLDatabase(articlesDatabase);
             if(fillSQLDatabase()==true){
                 fillListWithData();
-            }*/
+            }
             fillListWithData();
         }
 
